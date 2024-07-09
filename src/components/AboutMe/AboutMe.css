@@ -1,0 +1,44 @@
+/* custom-tabs.css */
+.react-tabs__tab-list {
+  background-color: transparent;
+  padding-left: 15px;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+}
+
+.react-tabs__tab {
+  background-color: transparent;
+  font-weight: 700;
+  padding: 7px 25px;
+  text-transform: uppercase;
+  letter-spacing: .7px;
+  box-shadow: none !important;
+  transition: 0.2s ease-in;
+  -webkit-transition: 0.2s ease-in;
+  -moz-transition: 0.2s ease-in;
+  -ms-transition: 0.2s ease-in;
+  -o-transition: 0.2s ease-in;
+}
+
+.react-tabs__tab--selected {
+  /* Optionally, you can style the selected tab differently */
+  background-color: transparent;
+  border-bottom: 2px solid #0f172a;
+  color: #0B7986;
+  /* Add any other styles for the selected tab */
+}
+
+/* Remove border-bottom and box-shadow from the selected tab */
+/* Additional specificity to ensure all potential styles are overridden */
+/* Remove any default focus outline if it's causing the issue */
+/* If there's a hover effect causing the white line */
+/* General tab styling to ensure consistency */
+/* Ensure no parent container or pseudo-element is causing the issue */
+.react-tabs__tab--selected::before,
+.react-tabs__tab--selected::after {
+  box-shadow: none !important;
+  background: none !important;
+}
